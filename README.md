@@ -3,7 +3,7 @@ The other alternatives to request testing with Postman are REST Client Extension
 
 ## Rest Client Extension
 After downloading this extension, you can start creating request file with .http extension.
-![image](rest_client_example.jpg)
+![image](rest_client/rest_client_example.jpg)
 ```
 // rest.http
 https://swapi.dev/api/people/3
@@ -65,3 +65,66 @@ GET {{hostname}}/planets/3/
 ## Fake API resources
 - [JSON Placeholder](https://jsonplaceholder.typicode.com/)
 - [The Star Wars API](https://swapi.dev/)
+
+## curl command
+cURL stands for client URL which is a command line tool that be used to transfer data to and from a server.
+Syntax:
+```
+curl <OPTION> <URL>
+```
+
+### GET request
+```
+curl http://localhost:5000/comments
+
+// show header
+curl -i http://localhost:5000/comments
+curl --head http://localhost:5000/comments
+
+```
+### Show Header
+
+### Downloading files HTTP
+- `-o <FILE_NAME>` - download file and paste in a new file.
+- `-O` - download file and auto create a file with endpoint name (file name is not required).
+- `-#` - change download progress to progress bar
+```
+curl -o comments.txt http://localhost:5000/comments
+curl -# -O http://localhost:5000/comments
+curl -O --limit-rate 1000B https://jsonplaceholder.typicode.com/Flowdash-logo-text.png
+```
+
+### Download/Upload files FTP
+```
+// format
+curl -u "user:password" <URL>
+
+// Download
+curl -u neverrest:823454 -O file.txt ftp://ftp.neverrest.com
+
+// Upload
+curl -u neverrest:823454 -T file.txt ftp://ftp.neverrest.com
+
+```
+
+### Headers
+```
+curl -H "Content-Type: application/json" -H "Accept: application/json" [URL]
+```
+
+### POST Request
+```
+// basic
+curl --data "body=dazzling command&postId=2" http://localhost:5000/comments
+
+// send json body
+curl -H "Content-Type: application/json" -d '{"body":"Dazzling Comment","postId":2}' http://localhost:5000/comments
+
+// send json body with json file
+curl -X POST -H "Content-Type: application/json" -d @data.json http://localhost:5000/comments
+
+```
+
+### Reference
+- [cURL คืออะไร? + มาหัดใช้กันเถอะ](https://devahoy.com/blog/2016/11/getting-started-with-curl/)
+- [Basic cURL Tutorial](https://www.youtube.com/watch?v=7XUibDYw4mc&t=328s)
