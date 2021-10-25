@@ -11,6 +11,16 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "body": "Dazzling Comment",
+      "postId": 2,
+      "id": 2
+    },
+    {
+      "body": "Wonderful Comment",
+      "postId": 3,
+      "id": 3
     }
   ]
 }
