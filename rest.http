@@ -1,4 +1,6 @@
 @hostname = https://swapi.dev/api
+@jsonwebserver = http://localhost:3000
+
 {{hostname}}/people/3
 
 ### separate between request
@@ -25,3 +27,30 @@ Content-Type: application/json
     "userId": "123",
     "name": "Chitsaunpong"
 }
+
+###
+
+GET {{jsonwebserver}}/comments
+
+### 
+POST {{jsonwebserver}}/comments
+Content-Type: application/json
+
+{
+    "body": "Wonderful message",
+    "postId": 2
+}
+
+###
+
+PUT {{jsonwebserver}}/comments/2
+Content-Type: application/json
+
+{
+    "body": "Amazing message",
+    "postId": 4
+}
+
+###
+
+DELETE {{jsonwebserver}}/comments/2
