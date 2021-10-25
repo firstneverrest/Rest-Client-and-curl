@@ -1,0 +1,23 @@
+{
+  "name": "rest-client",
+  "version": "1.0.0",
+  "description": "The other alternatives to request testing with Postman are REST Client Extension and curl command. If you are the person that get boring of open Postman while testing REST API, I recommend REST Client Extension in vscode.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstneverrest/Rest-Client-and-curl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firstneverrest/Rest-Client-and-curl/issues"
+  },
+  "homepage": "https://github.com/firstneverrest/Rest-Client-and-curl#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}
