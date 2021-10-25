@@ -3,6 +3,7 @@ The other alternatives to request testing with Postman are REST Client Extension
 
 ## Rest Client Extension
 After downloading this extension, you can start creating request file with .http extension.
+![image](rest_client_example.jpg)
 ```
 // rest.http
 https://swapi.dev/api/people/3
